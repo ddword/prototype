@@ -1,0 +1,53 @@
+<div class="container-fluid container">
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb d-inline-flex pl-0 pt-0">
+                <li class="breadcrumb-item"><a href="/unit/homepage">HomePage</a></li>
+                <li class="breadcrumb-item active"><span>Documents</span> <!-- Todo: Propably hide it in alpha version if will be just one page-->
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="column">  
+            <app-categories-tree (eventChosenHighCategory)="getSubcategories($event)" (filesOfSubcategory)="scopeFiles($event)" (titleOfSubcategory)="scopeTitle($event)"></app-categories-tree>
+        </div>  
+        <div class="column" style="padding-left: 4rem; border-left: 1px solid rgba(0,0,0,0.15);">
+            <!--<ng-container *ngIf="!subcategories">
+                <h5>{{pageTitle}}</h5>
+            </ng-container>/-->
+            <ng-container *ngIf="eventCategory && subcategories && !description && files.length === 0">
+                <h5>{{eventCategory}}</h5>
+            </ng-container>
+            <ng-container *ngIf="description">
+                <h5>{{description.name}}</h5>
+            </ng-container>
+            <ul class="list-unstyled documents" *ngIf="files">
+                <li *ngFor="let file of files">
+                    <a href class="waves-effect" target="_blank">
+                        <span class="sv-normal">{{file?.name}}</span>
+                        <input type="checkbox" *ngIf="isDownload">
+                    </a>
+                </li>
+            </ul>
+            <!--<ul class="list-unstyled documents" *ngIf="actions.isDownload">
+                <li><a href="" class="waves-effect">
+                    <span class="sv-normal">PQube 3 Brochure 3.0.pdf </span>
+                    <input type="checkbox" class=""></a>
+                </li>
+                <li><a href="" class="waves-effect">
+                    <span class="sv-normal">PQube 3e Brochure.pdf </span>
+                    <input type="checkbox" class=""></a>
+                </li>
+            </ul>-->
+            <ng-container *ngIf="isDownload && files">
+                <button class="btn btn-info p-2 button-collapse">
+                    <i class="fas fa-download"></i> Download zip   
+                </button>
+                <!--<div>
+                    <a>text of link</a>
+                </div>/-->
+            </ng-container>
+        </div>
+    </div>
+</div>

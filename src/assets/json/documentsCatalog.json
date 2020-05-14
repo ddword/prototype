@@ -1,0 +1,19 @@
+{
+    "data": {
+        "moduleRole": "Simple",
+        "title": "Catalog",
+        "categories": [
+            "LATEST NEWS & INFORMATION",
+            "DISTRIBUTOR DOWNLOADS",
+            "ENTERPRISE SOFTWARE SOLUTION"
+        ]
+    },
+    "success": {
+        "status": true
+    },
+    "error": {
+        "code": null,
+        "message": "string"
+        
+    }   
+}

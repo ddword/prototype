@@ -1,0 +1,48 @@
+<div class="container container-fluid">
+  <!--<p class="col reminder for me">Todo Note: ForgotPassword, Logout popup, Registration, Resolver, and styles background</p>/-->
+  <br>
+  <br>
+  <div class="login col">
+      <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3 mb-md-0 mb-5">
+            <form class="border border-light p-5"
+                  [formGroup]="loginForm"
+                  (ngSubmit)="onSubmit(loginForm.get('email').value, loginForm.get('password').value)">
+              <div>
+                <img src="/assets/images/psl-logo.svg" alt="Powerside" />
+              </div>
+              <div class="form-group md-form mt-5">
+                <input formControlName="email" type="email" 
+                        id="email" 
+                        class="form-control"
+                        placeholder="Email">
+              </div>
+              <div *ngIf="!loginForm.get('email').valid && loginForm.dirty" class="text-alert">
+                <span>Email is required</span>
+              </div>
+              <div class="form-group md-form mt-5">
+                <input formControlName="password" type="password" id="password" class="form-control" placeholder="Password">
+              </div>
+              <div *ngIf="!loginForm.get('password').valid && loginForm.dirty" class="text-alert">
+                <span>Password is required</span>
+              </div>
+              <div class="d-flex justify-content-between mt-5">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                </div>
+                <div>
+                    <a routerLink="/forgot">Forgot password?</a>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-info btn-block my-4"
+                    *ngIf="loginForm"
+                    [disabled]="!loginForm.valid">Log me in</button>
+              <div class="text-center">
+                <p>No account?
+                    <a routerLink="/register">Register</a>
+                </p>
+              </div>
+            </form>
+      </div>
+  </div>
+</div>    

@@ -1,0 +1,12 @@
+.login {
+    form {
+        button.btn-info.disabled,
+        button.btn-info:disabled {
+            background-color:grey !important; 
+            border-color:grey !important;  
+        }
+    }
+    .text-alert {
+        color: red;
+    }
+}

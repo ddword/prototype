@@ -1,0 +1,78 @@
+.fixed-top {
+    min-height: 100px;
+}
+.tab-navigation {
+    background-color: #e8f0fe;
+    padding: 0 1rem;
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, .12);
+    ul> li> a {
+        color: #000000;
+        &:hover {
+            color: #222f71;
+        } 
+    }
+}
+
+.navbar {
+    .navbar-brand {
+        padding-top: 0;
+        img {
+            height: 20px;
+        }
+    }
+    .nav-link {
+        color: #444343!important;
+    }
+    .button-collapse {
+        padding-top: 1px;
+    }
+}
+
+.collapse .navbar-collapse .show{
+    display: inline;
+}
+
+.card-intro .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0 !important;
+    h1 {
+        margin-bottom: 0;
+    }
+}
+.just-to-show-how-it-works {
+    display: none;
+    svg#angry {
+    color:#00b4ff;
+    width: 1.4em;
+    height: 1.4em;
+    }
+}
+
+.card-intro {
+    margin-top: 103px;
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        .container-fluid, .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    .card-intro {
+        margin-top: 96px;
+    }
+}
+
+@media (max-width: 320px) {
+    .card-intro {
+        margin-top: 103px;
+    }
+}
+
+@media (min-width: 1441px) {
+    .card-intro {
+    padding-left: 0 !important;
+    }
+}

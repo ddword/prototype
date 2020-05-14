@@ -1,0 +1,305 @@
+{
+  "login": {
+        "data": {
+            "id": 82,
+            "guid": "901fc220-d322-11e9-ad76-fdbed4af21fd",
+            "firstName": "Anna",
+            "middleName": null,
+            "lastName": "Smultz",
+            "organization": "Company Name",
+            "email": "first.last@partner.com",
+            "contactPhone": "(123) 654 0000",
+            "mobilePhone": "(123) 654 0987",
+            "preferredLanguage": "ENG",
+            "role": "User",
+            "userRoleId": 1,
+            "addressId": "number",
+            "addressTypeId": "number",
+            "city": "Lavale",
+            "country": "CANADA",
+            "state": "QC",
+            "street1": "4020 Boul le Corbusier",
+            "street2": "123 rue Florence",
+            "publicKey": "string",
+            "token": "string",
+            "zipCode": "H7L 5R2",
+            "isSystemAdministrator": true,
+            "isPartner": false,
+            "createdById": 71,
+            "createdWhen": "2019-09-09T16:55:01.000Z",
+            "modifiedById": 82,
+            "modifiedWhen": "2019-11-01T15:27:01.000Z",
+            "userGroupRights": "Regular User",
+            "rightsList": [
+                "HomePage",
+                "Documents"
+            ]
+        },
+        "success": {
+            "status": true
+        },
+        "error": {
+            "code": null,
+            "message": "string"
+        }
+    },
+    "categories": {
+        "data":{
+            "moduleRole": "Simple",
+            "title": "Catalog",
+            "categories": [
+                "LATEST NEWS & INFORMATION",
+                "DISTRIBUTOR DOWNLOADS",
+                "ENTERPRISE SOFTWARE SOLUTION"
+            ]
+        },
+        "success": {
+            "status": true
+        },
+        "error": {
+            "code": null,
+            "message": "string"
+        }    
+    },
+    "documentsTree": {
+        "data": {
+            "type": "directory",
+            "description": "some text",
+            "tags": [
+                "technical", "documents"
+            ],
+            "id": "564f1eb1-4d5e-4247-b1ff-c37c9c72e89a",
+            "name": "DISTRIBUTOR DOWNLOADS",
+            "children": [
+                {
+                    "type": "directory",
+                    "tags": [
+                        "manuals"
+                    ],
+                    "id": "1ef9f208-42aa-403c-8313-4409a22dbb60",
+                    "name": "Manuals",
+                    "children": [
+                        {
+                            "type": "file",
+                            "description": "some text",
+                            "tags": [
+                                "manual", "pqube3", "installation"
+                            ],
+                            "id": "f144bf6c-bb7b-4216-9a40-87ce4d5e1af5",
+                            "name": "PQube 3 Installation Manual Revision 3.1.pdf"
+                        },
+                        {},
+                        {
+                            "type": "file",
+                            "tags": [
+                                "manual", "pqube3", "operation"
+                            ],
+                            "id": "5b39673f-f870-4af5-b915-996d5d9550cc",
+                            "name": "PQube 3 Operation Reference Manual Revision 3.1.pdf"
+                        }
+                    ]
+                },
+                {
+                    "type": "directory",
+                    "tags": [
+                        "documents"
+                    ],
+                    "id": "1e0d76a2-ceb7-42ba-8880-0cfd5ee1c3bb",
+                    "name": "Documents",
+                    "children": [
+                        {
+                            "type": "directory",
+                            "tags": [
+                                "brochures"
+                            ],
+                            "id": "b406c54a-4751-4304-bdd7-f530cee5fac2",
+                            "name": "Brochures",
+                            "children": [
+                                {
+                                    "type": "file",
+                                    "tags": [
+                                        "brochure", "pqube3"
+                                    ],
+                                    "id": "07670c0e-4432-480e-a4d0-334e6f25cae0",
+                                    "name": "PQube 3 Brochure 3.0.pdf"
+                                },
+                                {
+                                    "type": "file",
+                                    "tags": [
+                                        "brochure", "pqube3e"
+                                    ],
+                                    "id": "4c0acd2c-5065-4523-902c-917341aed35a",
+                                    "name": "PQube 3e Brochure.pdf"
+                                }
+                            ]
+                        },
+                        {   "type": "directory",
+                            "tags": [
+                                "application", "notes"
+                            ],
+                            "id": "d059f9cc-5f0b-4672-8df2-58ac768b2445",
+                            "name": "Application Notes",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "directory",
+                    "tags": [
+                        "technical", "info"
+                    ],
+                    "name": "TECHNICAL INFO",
+                    "id": "dc7d2854-b49a-40f8-aefa-0fdbf14fb543",
+                    "children": [
+                        {
+                            "type": "directory",
+                            "tags": [
+                                "2D", "3D", "drawing file"
+                            ],
+                            "id": "2a6c88b9-1faf-45e5-9ab4-708d61f021c5",
+                            "name": "2D and 3D Drawing Files",
+                            "children": [
+                                {
+                                    "type": "directory",
+                                    "tags": [
+                                        "ENV2"
+                                    ],
+                                    "name": "ENV2",
+                                    "id": "d9001e73-74bf-4064-b0ed-e61521808cc3",
+                                    "children": [
+                                        {
+                                            "type": "file",
+                                            "tags": [
+                                                "ENV2", "STEP", "file"
+                                            ],
+                                            "id": "69a3168a-b734-466c-a502-cd6ca6aa82db",
+                                            "name": "ENV2_STEP_File.STEP"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "directory",
+                                    "tags": [
+                                        "pqube3"
+                                    ],
+                                    "id": "b475ffbe-0ba5-451c-b5d2-9f6e41c934f4",
+                                    "name": "PQUBE3",
+                                    "children": [
+                                        {
+                                            "type": "zip",
+                                            "tags": [
+                                                "pqube3e", "3D CAD", "zip"
+                                            ],
+                                            "id": "b475ffbe-0ba5-451c-b5d2-9f6e41c934f4",
+                                            "name": "PQube 3e – 3D CAD SAT files.zip"
+                                        },
+                                        {},
+                                        {
+                                            "type": "file",
+                                            "tags": [
+                                                "pqube3e", "CTI"
+                                            ],
+                                            "id": "b475ffbe-0ba5-451c-b5d2-9f6e41c934f4",
+                                            "name": "DWG,ASSY,PQube-3,CTI - 189-000103-01.DWG"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "directory",
+                                    "tags": [
+                                        "pqube3", "STEP"
+                                    ],
+                                    "id": "b475ffbe-0ba5-451c-b5d2-9f6e41c934f4",
+                                    "name": "RM8",
+                                    "children": [
+                                        {
+                                            "type": "file",
+                                            "name": "Assy,PQube-3r_01.STEP"
+                                        }
+                                    ]
+                                }
+                            ]  
+                        }
+                    ]
+                },
+                {
+                    "type": "file",
+                    "tags": [
+                        "PQube3", "specifications"
+                    ],
+                    "id": "d516ee76-c3b1-47f7-9467-386703c6bd28",
+                    "name": "PQube3 3 Specifications 2.4.pdf"
+                },
+                {
+                    "type": "file",
+                    "tags": [
+                        "PSL", "SMI"
+                    ],
+                    "id": "6114e5a6-c24d-4efc-84e3-7d76084dfdcd",
+                    "name": "PSL-SMI-MIB.MY"
+                },
+                {
+                    "type": "file",
+                    "tags": [
+                        "PSL", "SENSOR"
+                    ],
+                    "id": "2a6c88b9-1faf-45e5-9ab4-708d61f021c5",
+                    "name": "PSL-ENTITY-SENSOR-MIB.txt"
+                }
+            ]
+        },
+        "success": {
+            "status": true
+        },
+        "error": {
+            "code": null,
+            "message": "string"
+            
+        }
+    },
+    "zip": {
+        "data":[
+            "http://host.com/category/subcategory/nameOfFilesArchive.tar.gz"
+        ],
+        "success": {
+            "status": true
+        },
+        "error": {
+            "code": null,
+            "message": "string"
+            
+        }   
+    },
+    "admin": {
+        "data": {
+            "moduleRole": "Simple",
+            "userRole": "Regular",
+            "children": [
+                {
+                    "module": "Documents",
+                    "adminSettings": false,
+                    "readOnly": true,
+                    "update": false,
+                    "delete": false,
+                    "download": true
+                },
+                {
+                    "module": "HomePage",
+                    "adminSettings": false,
+                    "readOnly": true,
+                    "update": false,
+                    "delete": false,
+                    "download": false
+                }
+            ]
+        },
+        "success": {
+            "status": true
+        },
+        "error": {
+            "code": null,
+            "message": "string"
+            
+        } 
+    }      
+}

@@ -1,0 +1,13 @@
+{
+    "data":[
+        "http://host.com/category/subcategory/nameOfFilesArchive.tar.gz"
+    ],
+    "success": {
+        "status": true
+    },
+    "error": {
+        "code": null,
+        "message": "string"
+        
+    }   
+}

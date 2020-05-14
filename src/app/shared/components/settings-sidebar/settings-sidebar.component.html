@@ -1,0 +1,35 @@
+<div class="sidebar fixed position-fixed">
+    <button class="btn btn-info p-2 button-collapse"
+        data-activates=".slide-out"
+        (click)="onShowSettingsBar()">
+            <i class="fas fa-cog"></i>    
+    </button>
+    <div class="slide-out side-nav" [ngClass]="{'collapsible': !toggleSlide}">
+        <ul class="custom-scrollbar list-unstyled">
+            <li *ngIf="config?.adminSettings && config?.update">
+                <a (click)="onUpdate($event)">
+                    Update  
+                    <i class="fas fa-angle-down rotate-icon"></i>
+                </a>
+                <div class="collapsible-body"></div>
+            </li>
+            <li>
+                <a (click)="onEdit($event)">Edit <i class="fas fa-angle-down rotate-icon"></i>
+                </a>
+                <div class="collapsible-body"></div>
+            </li>
+            <li *ngIf="config?.adminSettings && config?.delete"
+                (click)="onDelete($event)">
+                <a>Delete <i class="fas fa-angle-down rotate-icon"></i>
+                </a>
+                <div class="collapsible-body"></div>
+            </li> 
+            <li *ngIf="config?.download">
+                <button type="button" class="btn btn-outline-info btn-block white"
+                [ngClass]="{'activated': isActiveDownload}"
+                (click)="onDownload($event)">Download</button>
+            </li> 
+        </ul> 
+        <div class="sidenav-bg mask-strong"></div>
+    </div>
+</div>    

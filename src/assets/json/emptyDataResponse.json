@@ -1,0 +1,11 @@
+{
+    "data": {},
+    "success": {
+        "status": true
+    },
+    "error": {
+        "code": null,
+        "message": "string"
+        
+    }   
+}

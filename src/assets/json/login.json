@@ -1,0 +1,44 @@
+{
+  "data": {
+    "id": 82,
+    "guid": "901fc220-d322-11e9-ad76-fdbed4af21fd",
+    "firstName": "Anna",
+    "middleName": null,
+    "lastName": "Smultz",
+    "organization": "Company Name",
+    "email": "first.last@partner.com",
+    "contactPhone": "(123) 654 0000",
+    "mobilePhone": "(123) 654 0987",
+    "preferredLanguage": "ENG",
+    "role": "User",
+    "userRoleId": 1,
+    "addressId": "number",
+    "addressTypeId": "number",
+    "city": "Lavale",
+    "country": "CANADA",
+    "state": "QC",
+    "street1": "4020 Boul le Corbusier",
+    "street2": "123 rue Florence",
+    "publicKey": "string",
+    "token": "string",
+    "zipCode": "H7L 5R2",
+    "isSystemAdministrator": false,
+    "isPartner": false,
+    "createdById": 71,
+    "createdWhen": "2019-09-09T16:55:01.000Z",
+    "modifiedById": 82,
+    "modifiedWhen": "2019-11-01T15:27:01.000Z",
+    "userGroupRights": "Regular User",
+    "rightsList": [
+        "HomePage",
+        "Documents"
+    ]
+  },
+  "success": {
+    "status": true
+  },
+  "error": {
+    "code": null,
+    "message": "string"
+  }
+}

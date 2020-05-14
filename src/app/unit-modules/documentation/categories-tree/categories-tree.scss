@@ -1,0 +1,103 @@
+.docs-tree {
+    padding-right: 2rem;
+    ul.high-categories {
+        li {
+            a {
+                color: black;
+            }
+        }
+    }
+    ul.high-categories > li {
+        padding: 0.2em 0;
+    }
+    .subcategories {
+        display: block;
+        position: relative;
+        li > .collapsible-body,
+        li > .collapsible-body.shown {
+            display: none;
+        }
+        li.clicked > .collapsible-body.shown {
+            display: block;
+        }
+        li.clicked a,
+        li a {
+            padding: 0 0 0 16px;
+            position: relative;
+            display: block;
+            list-style: none;
+            font-size: 16px;
+            line-height: 26px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            text-decoration: none;
+            transition-duration: .3s;
+        }
+        li.nav-item > a:hover,
+        li.clicked a {
+            border-left: 2px solid #17a2b8;
+        }
+        li.clicked {
+            li a {
+                &::before {
+                    display: block;
+                    content: '.';
+                    position: absolute;
+                    font-size: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    background-size: cover;
+                    background-position: center;
+                    border: 1px solid #17a2b8;
+                    left: -6px;
+                    top: 15px;
+                    // transform: translateX(25%);
+                }
+            }
+            ul > li:first-child > a {
+                &::after {
+                    display: block;
+                    content: '.';
+                    position: absolute;
+                    font-size: 0;
+                    width: 10px;
+                    height: 15px;
+                    background-color: #fff;
+                    left: -6px;
+                    top: 0;
+                }
+            }
+            ul > li:last-child > a {
+                &::after {
+                    display: block;
+                    content: '.';
+                    position: absolute;
+                    font-size: 0;
+                    width: 10px;
+                    height: 15px;
+                    background-color: #fff;
+                    left: -6px;
+                    bottom: 0;
+                }
+            }
+            li.sv-normal:only-child > a {
+                border: none;
+            }
+            li.clicked a::before {
+                background-color: #17a2b8;
+            }
+            li.clicked {
+                li a {
+                    &::before {
+                        background-color: #fff;
+                    }
+                }
+                li.clicked a::before {
+                    background-color: #17a2b8;
+                }
+            }
+        }
+    }
+}

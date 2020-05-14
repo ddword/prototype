@@ -1,0 +1,92 @@
+<div class="docs-tree">
+    <ul class="list-unstyled high-categories">
+        <li class="nav-item" *ngFor="let category of categories"
+            (click)="chooseHighCategory($event, category)"
+            [ngClass]="{'active': isActiveCategory}">
+            <a class="item-category"> 
+                {{category}}
+            </a>
+            <div class="collapsible-body" style="display: block;">
+                <ul class="list-unstyled subcategories" 
+                    style="padding-left:1rem;"
+                    *ngIf="docs?.name === category && docs.children.length > 0">
+                            <li class="nav-item" 
+                                *ngFor="let subcategory of subcategories"
+                                (click)="showChild($event, subcategory, category, categories)">
+                                        <a *ngIf="subcategory?.type === 'directory'">
+                                            <span>
+                                               {{subcategory.name}}
+                                            </span>
+                                        </a>
+                                        <div class="collapsible-body" 
+                                            [ngClass]="{'shown': toggleShowingList}" 
+                                            *ngIf="subcategory.children">
+                                            <ul class="list-unstyled" 
+                                                style="padding-left:1rem;">
+                                                <li 
+                                                class="sv-normal"
+                                                *ngFor="let subChild of subcategory.children; index as i"
+                                                    (click)="showChild($event, subChild, subcategory.name, subcategories)">
+                                                    <a  
+                                                        *ngIf="subChild?.type === 'directory'">
+                                                        <span class="sv-normal"> 
+                                                            {{subChild.name}}
+                                                        </span>
+                                                    </a>
+                                                    <div class="collapsible-body" 
+                                                        [ngClass]="{'shown': toggleShowingList }"
+                                                        *ngIf="subChild.children">
+                                                            <ul class="list-unstyled" 
+                                                                style="padding-left:1rem;">
+                                                                <li *ngFor="let sub2Child of subChild.children"
+                                                                    (click)="showChild($event, sub2Child, subChild.name, subcategory.children)">
+                                                                    <a *ngIf="sub2Child?.type === 'directory'">
+                                                                        <span class="sv-normal">
+                                                                            {{sub2Child.name}}
+                                                                        </span>
+                                                                    </a>
+                                                                    <div class="collapsible-body" 
+                                                                        [ngClass]="{'shown': toggleShowingList}" 
+                                                                        *ngIf="sub2Child.children">
+                                                                        <ul class="list-unstyled" 
+                                                                            style="padding-left:1rem;">
+                                                                            <li *ngFor="let sub3Child of sub2Child.children"
+                                                                                (click)="showChild($event, sub3Child, sub2Child.name, subChild.children)">
+                                                                                <a *ngIf="sub3Child?.type === 'directory'">
+                                                                                    <span class="sv-normal">
+                                                                                        {{sub3Child.name}}
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div> 
+                                                                </li>
+                                                            </ul>
+                                                    </div>  
+                                                </li>
+                                            </ul>
+                                    </div>   
+                            </li>
+                            <!--<li >
+                                list-style-position
+                                <a href="" class="waves-effect">
+                                <span class="sv-normal">Documents</span></a>
+                                <div class="collapsible-body" style="display: block;">
+                                    <ul class="list-unstyled subcategories" style="padding-left:1rem;">
+                                        <li><a href="" class="waves-effect">
+                                            <span class="sv-normal">Brochures</span></a>
+                                        </li>
+                                        <li><a href="" class="waves-effect">
+                                            <span class="sv-normal">Application Notes</span></a>
+                                        </li>
+                                    </ul>
+                                </div>   
+                            </li>
+                            <li><a href="" class="waves-effect">
+                                <span class="sv-normal">TECHNICAL INFO</span></a>
+                            </li>/-->
+                </ul>
+            </div>    
+        </li>
+    </ul>
+</div>
